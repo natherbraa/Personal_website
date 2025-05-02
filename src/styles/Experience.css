@@ -1,0 +1,212 @@
+.experience-section {
+  background-color: var(--light-color);
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.timeline-container {
+  position: relative;
+  padding: 2rem 0;
+}
+
+html[dir="rtl"] .timeline-track {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 30px;
+  left: auto;
+  width: 4px;
+  background-color: var(--secondary-color);
+}
+
+html[dir="ltr"] .timeline-track {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 30px;
+  right: auto;
+  width: 4px;
+  background-color: var(--secondary-color);
+}
+
+.timeline-item {
+  display: flex;
+  margin-bottom: 4rem;
+  position: relative;
+  opacity: 0;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+html[dir="rtl"] .timeline-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--card-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  box-shadow: 0 5px 15px var(--shadow-color);
+  z-index: 2;
+  margin-left: 2rem;
+  margin-right: 0;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+html[dir="ltr"] .timeline-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--card-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  box-shadow: 0 5px 15px var(--shadow-color);
+  z-index: 2;
+  margin-right: 2rem;
+  margin-left: 0;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  padding: 2rem;
+  flex: 1;
+  box-shadow: 0 5px 15px var(--shadow-color);
+  position: relative;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+}
+
+html[dir="rtl"] .timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: -10px;
+  left: auto;
+  width: 20px;
+  height: 20px;
+  background-color: var(--card-bg);
+  transform: rotate(45deg);
+  transition: background-color 0.3s ease;
+}
+
+html[dir="ltr"] .timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: -10px;
+  right: auto;
+  width: 20px;
+  height: 20px;
+  background-color: var(--card-bg);
+  transform: rotate(45deg);
+  transition: background-color 0.3s ease;
+}
+
+.timeline-period {
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  background-color: var(--secondary-color);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.timeline-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.timeline-description {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.timeline-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  padding: 0.3rem 0.8rem;
+  background-color: var(--light-color);
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.experience-cta {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+  html[dir="rtl"] .timeline-track {
+    right: 20px;
+    left: auto;
+  }
+
+  html[dir="ltr"] .timeline-track {
+    left: 20px;
+    right: auto;
+  }
+
+  html[dir="rtl"] .timeline-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    margin-left: 1.5rem;
+    margin-right: 0;
+  }
+
+  html[dir="ltr"] .timeline-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    margin-right: 1.5rem;
+    margin-left: 0;
+  }
+
+  .timeline-content {
+    padding: 1.5rem;
+  }
+
+  .timeline-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-track {
+    display: none;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+  }
+
+  .timeline-icon {
+    margin-bottom: 1rem;
+    margin-left: 0;
+    align-self: center;
+  }
+
+  .timeline-content::before {
+    display: none;
+  }
+}

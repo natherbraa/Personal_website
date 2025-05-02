@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تشغيل موقع نذير براء الشخصي محلياً</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            direction: rtl;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        .content {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        .note {
+            background-color: #ffffcc;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            border-left: 4px solid #f39c12;
+        }
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: Consolas, Monaco, 'Andale Mono', monospace;
+        }
+        .command {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-family: Consolas, Monaco, 'Andale Mono', monospace;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>تشغيل موقع نذير براء الشخصي محلياً</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <h2>مرحباً بك في صفحة تشغيل المشروع</h2>
+            <p>هذه الصفحة تساعدك على تشغيل وتصفح موقعك الشخصي على جهازك المحلي.</p>
+            
+            <h3>كيفية تشغيل المشروع:</h3>
+            <ol>
+                <li>افتح نافذة الأوامر (Command Prompt أو Terminal)</li>
+                <li>انتقل إلى مجلد المشروع:
+                    <div class="command">cd "C:\Users\Almustafa\Documents\augment-projects\Personal website"</div>
+                </li>
+                <li>قم بتثبيت الاعتمادات إذا لم تكن مثبتة بالفعل:
+                    <div class="command">npm install</div>
+                </li>
+                <li>قم بتشغيل المشروع:
+                    <div class="command">npm run dev</div>
+                </li>
+                <li>انتقل إلى الرابط المحلي الذي سيظهر في نافذة الأوامر (عادة ما يكون <code>http://localhost:5173</code>)</li>
+            </ol>
+
+            <a href="http://localhost:5173" class="btn" target="_blank">فتح المشروع (إذا كان قيد التشغيل)</a>
+            
+            <div class="note">
+                <h4>ملاحظة حول نموذج الاتصال:</h4>
+                <p>تم تحديث نموذج الاتصال لاستخدام EmailJS مع معرف الخدمة <code>service_63srk5k</code>.</p>
+                <p>لإكمال الإعداد، يجب عليك:</p>
+                <ol>
+                    <li>إنشاء قالب في حساب EmailJS الخاص بك</li>
+                    <li>تحديث معرف القالب في ملف <code>src/components/Contact.tsx</code> (استبدال <code>template_contact</code>)</li>
+                    <li>إضافة مفتاح API العام الخاص بك (استبدال <code>YOUR_PUBLIC_KEY</code>)</li>
+                </ol>
+            </div>
+
+            <h3>كيفية معرفة الرسائل المرسلة من نموذج الاتصال:</h3>
+            <p>بعد إكمال إعداد EmailJS، ستتمكن من رؤية جميع الرسائل المرسلة من خلال:</p>
+            <ol>
+                <li>تسجيل الدخول إلى حسابك على <a href="https://dashboard.emailjs.com/" target="_blank">لوحة تحكم EmailJS</a></li>
+                <li>الانتقال إلى قسم "Email History" (سجل البريد الإلكتروني)</li>
+                <li>ستجد هناك جميع الرسائل التي تم إرسالها من نموذج الاتصال في موقعك</li>
+            </ol>
+            <p>يمكنك أيضاً إعداد EmailJS لإعادة توجيه هذه الرسائل إلى بريدك الإلكتروني الشخصي.</p>
+        </div>
+    </div>
+</body>
+</html>
