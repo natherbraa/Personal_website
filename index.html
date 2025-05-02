@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/Personal_website/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="الموقع الشخصي لنذير براء - مصمم ومبرمج متعدد المهارات" />
+    <meta name="keywords" content="نذير براء, تصميم, برمجة, مواقع, تطبيقات, فيديو, صور" />
+    <title>نذير براء | مصمم ومبرمج</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <!-- سكريبت للتعامل مع التوجيه في GitHub Pages -->
+    <script type="text/javascript">
+      // تغيير هذا إلى اسم المستودع الخاص بك
+      var repoName = 'Personal_website';
+
+      // إعادة توجيه من صفحة 404 إلى الصفحة الرئيسية
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
+    <script type="module" crossorigin src="/Personal_website/assets/index-DB9J5vJn.js"></script>
+    <link rel="stylesheet" crossorigin href="/Personal_website/assets/index-BnPnDvxj.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
